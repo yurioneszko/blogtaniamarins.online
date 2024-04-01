@@ -39,11 +39,11 @@ $('like').on('click', function() {
     if ($(this).hasClass('liked')) {
         $(this).parents('.fb-comments-wrapper, .fb-comments-reply-wrapper').find('likes').text(parseInt($(this).parents('.fb-comments-wrapper, .fb-comments-reply-wrapper').find('likes').text()) - 1)
         $(this).removeClass('liked')
-        $(this).text('Curtir')
+        $(this).text('Like')
     } else {
         $(this).parents('.fb-comments-wrapper, .fb-comments-reply-wrapper').find('likes').text(parseInt($(this).parents('.fb-comments-wrapper, .fb-comments-reply-wrapper').find('likes').text()) + 1)
         $(this).addClass('liked')
-        $(this).text('Descurtir')
+        $(this).text('Deslike')
     }
 })
 $('reply').on('click', function() {
@@ -68,7 +68,7 @@ function handleReply(id) {
         text +
         '" placeholder="AÃ±ade una respuesta..." class="fb-reply-input" /></div><div class="col-xs-2"><button class="fb-reply-button" onclick="javascript:postReply(' +
         obj.attr('id') +
-        ');">Responder</button></div></div>')
+        ');">Reply</button></div></div>')
 }
 
 function postReply(id) {
